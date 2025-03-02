@@ -1,0 +1,153 @@
+main{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    place-items: center;
+    place-content: center;
+    height: 100vh;
+    background-color: #121826;
+}
+
+.min-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    place-items: center;
+    background-color: #121826;
+
+}
+.form-container{
+    position: absolute;
+    background-color: #212936;
+    padding: 2rem;
+    width: 450px;
+    border-radius: 20px;
+}
+.first-step, .second-step, .third-step {
+    display: none;
+}
+.first-step h2{
+    color: white ;
+    margin-bottom: 2rem;
+}
+.second-step h2{
+    color: white ;
+    margin-bottom: 2rem;
+}
+
+.form-group{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+}
+.input-group label{
+    color: white;
+    margin-bottom: 5px;
+}
+.input-group input{
+    color: white;
+    margin-bottom: 15px;
+    padding: 10px 10px;
+    background-color: transparent;
+    border: 0;
+    border-radius: 10px;
+    border: solid gray;
+
+}
+.input-group input::placeholder{
+color: white;
+font-size: 10px;
+padding: 20px;
+}
+.btn-group{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    gap: 10px;
+}
+.btn{
+    background: linear-gradient(180deg, #845eee 0%, #652cd1 100%);
+    color: white;
+    align-items: center;
+    border: 0;
+    padding: 10px 30px 10px 30px ;
+    border-radius: 10px;
+}
+
+.active-step{
+    display: block;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+.option{
+    padding: 10px 30px 10px 30px;
+    background-color: #394050;
+    border-radius: 10px;
+    color: white;
+}
+.active-option{
+    background-color: #652cd1;
+}
+
+.third-step h2{
+    color: white;
+}
+.details h4{
+    color: gray;
+    margin: 0;
+}
+.topics{
+    color: gray;
+    margin: 0;
+}
+.selected-topics{
+    color: white;
+    margin: 0;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+    justify-content: center ;
+    margin-top: 22rem;
+    top: 20px;
+}
+.steps{
+    color: white;
+} 
+.dots{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-left: 10px;
+}
+.dot{
+    border-radius: 100%;
+    background-color: #394050;
+    width: 8px;
+    height: 8px;
+    
+}
+.active-dot{
+    background-color: #652cd1;
+}
+@media screen and (max-width: 640px) {
+    .form-container{
+        width: 100%;
+        box-sizing: border-box;
+    }
+}

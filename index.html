@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Multi Step Form</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="min-container">
+        <form action="" class="form-container" id="multiStepForm" >
+          <div class="first-step active-step">
+            <h2>Register</h2>
+            <div class="form-group">
+              <div class="input-group">
+                <label> Name </label>
+                <input type="text" placeholder="Enter Name" id="name"/>
+              </div>
+              <div class="input-group">
+                <label> Email </label>
+                <input type="email" placeholder="example@gmail.com" id="email"/>
+              </div>
+            </div>
+          </div>
+          <div class="second-step">
+            <h2>Which Topic are you interested in ?</h2>
+            <div id="options" class="options">
+                <div onclick="selectOption(this)"  class="option">
+                  Software Development
+                </div>
+                <div onclick="selectOption(this)"  class="option active-option">
+                  User Experience
+                </div>
+                <div onclick="selectOption(this)"  class="option">
+                  Graphic Design
+                </div>
+
+            </div>
+          </div>
+          <div class="third-step ">
+            <h2>Summary</h2>
+            <div class="details">
+              <h4 class="name-details">Name:</h4>
+              <h4 class="email-details">Email:</h4>
+            </div>
+
+            <div class="topics">
+              <h5>Topics:</h5>
+              <div class="selected-topics">
+                <ul>
+                  <li>User experience</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="btn-group">
+            <button type="button" onclick="prevStep()" class="btn btn-step-1">Back</button>
+            <button type="button" onclick="nextStep()" class="btn btn-step-1">Next </button>
+            <button type="submit" class="btn btn-step-1">Submit</button>
+          </div>
+        </form>
+        <div class="bottom">
+          <div class="steps active-steps">Step 1 of 3</div>
+          <div class="dots">
+            <span class="dot"></span>
+            <span class="dot active-dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
